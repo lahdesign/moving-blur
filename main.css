@@ -1,0 +1,32 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("assets/roslindale.png") center/cover no-repeat;
+    
+    /* Apply the animated mask */
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 60%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 60%);
+    -webkit-mask-size: 200% 200%;
+    mask-size: 200% 200%;
+    -webkit-mask-position: 50% 50%;
+    mask-position: 50% 50%;
+    
+    /* Animate the mask movement */
+    animation: moveBlur 5s infinite alternate ease-in-out;
+}
+
+@keyframes moveBlur {
+    0% {
+        -webkit-mask-position: 10% 30%;
+        mask-position: 10% 30%;
+    }
+    50% {
+        -webkit-mask-position: 70% 50%;
+        mask-position: 70% 50%;
+    }
+    100% {
+        -webkit-mask-position: 30% 80%;
+        mask-position: 30% 80%;
+    }
+}
